@@ -1,18 +1,11 @@
 import React, {Component} from 'react';
-import Header from './components/Header';
-// import Routes from './Routes';
-// import './styles/main.scss';
-
-
+import './styles/main.scss';
+import Routes from './Routes';
 
 class App extends Component {
   render() {
     return (
-      // <Routes />
-      <div>
-        <h1>hello react</h1>
-        <Header />
-      </div>
+      <Routes />
     );
   }
 }
