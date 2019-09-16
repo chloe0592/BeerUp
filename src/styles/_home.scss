@@ -1,3 +1,54 @@
-.home-container {
+.main-container {
   padding: 200px; 
+}
+
+body {
+  background-image: url("../assets/pattern.png");
+  background-color: #000 !important;
+}
+
+.title-text {
+  color: white;
+}
+
+.white-container {
+  background-color: white;
+}
+
+
+.join-beerup-btn {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc907), color-stop(1, #ffc907));
+	background:-moz-linear-gradient(top, #ffc907 5%, #ffc907 100%);
+	background:-webkit-linear-gradient(top, #ffc907 5%, #ffc907 100%);
+	background:-o-linear-gradient(top, #ffc907 5%, #ffc907 100%);
+	background:-ms-linear-gradient(top, #ffc907 5%, #ffc907 100%);
+	background:linear-gradient(to bottom, #ffc907 5%, #ffc907 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc907', endColorstr='#ffc907',GradientType=0);
+	background-color:#ffc907 !important;
+	-moz-border-radius:30px !important;
+	-webkit-border-radius:30px !important;
+	border-radius:30px !important;
+	border:1px solid #ffc907 !important;
+	display:inline-block !important;
+	cursor:pointer !important;
+	color:#0a060a !important;
+	font-family:Arial !important;
+	font-size:13px !important;
+	font-weight:bold !important;
+	padding:20px 39px !important;
+	text-decoration:none !important;
+}
+.join-beerup-btn:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc907), color-stop(1, #ffc907));
+	background:-moz-linear-gradient(top, #ffc907 5%, #ffc907 100%);
+	background:-webkit-linear-gradient(top, #ffc907 5%, #ffc907 100%);
+	background:-o-linear-gradient(top, #ffc907 5%, #ffc907 100%);
+	background:-ms-linear-gradient(top, #ffc907 5%, #ffc907 100%);
+	background:linear-gradient(to bottom, #ffc907 5%, #ffc907 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc907', endColorstr='#ffc907',GradientType=0);
+	background-color:#ffc907 !important;
+}
+.join-beerup-btn:active {
+	position:relative;
+	top:1px;
 }

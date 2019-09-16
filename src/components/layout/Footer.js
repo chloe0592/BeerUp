@@ -12,7 +12,7 @@ class Footer extends Component {
     return (
       <div className="container-fluid text-center text-md-left footer-container">
 
-        <div className="row">
+        <div className="row footer-row">
           <div className="col-md-4 mt-md-0 mt-3">
             <div className="my-0 mr-md-auto">
               <img src={symbol} alt="Beer logo" className="beer-logo-img"/>
@@ -22,9 +22,9 @@ class Footer extends Component {
 
           <div className="col-md-4 mb-md-0 mb-3">
             <nav className="my-2 my-md-0 mr-md-3 text-center">
-              <Link className="p-2 text-light " to="/">Home</Link>
-              <Link className="p-2 text-light " to="/">Favourites</Link>
-              <Link className="p-2 text-light " to="/">JOIN</Link>
+              <Link className="p-2 text-light" to="/">Home</Link>
+              <Link className="p-2 text-light" to="/">Favourites</Link>
+              <Link className="p-2 text-light" to="/">JOIN</Link>
             </nav>
           </div>
           <div className="col-md-4 mb-md-0 mb-3 social-icons text-center">
@@ -42,8 +42,10 @@ class Footer extends Component {
             </a>
           </div>
         </div>
-        <div className="footer-copyright text-center py-3 text-light">
-          © 2019 All Rights Reserved.
+        <div className="copyright">
+          <div className="text-center py-3 text-light">
+            © 2019 All Rights Reserved.
+          </div>
         </div>
 
       </div>
