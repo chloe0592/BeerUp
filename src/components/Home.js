@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Header from './Header';
+import Header from './layout/Header';
+import Footer from './layout/Footer';
 // import symbol from '../assets/symbol.svg';
 
 class Home extends Component {
@@ -9,8 +10,8 @@ class Home extends Component {
         <Header/>
         <div className="home-container">
           bla
-          
         </div>
+        <Footer/>
       </div>
     );
   }
