@@ -15,11 +15,11 @@ class Home extends Component {
         <Header/>
         <div className="main-container">
           <div className="black-container">
-            <div className="row">
+            <div className="row row-1">
               <div className="col-12 col-md-6">
                 <div className="title-text">
                   <h6>THE BEERSTER PRO 2.0</h6>
-                  <h1>JOIN OUR FAMOUS BEERUP</h1>
+                  <h1>JOIN OUR <br></br> FAMOUS <br></br> BEERUP</h1>
                   <Link className="btn btn-outline-primary header-link join-beerup-btn" to="/">JOIN BEERUP</Link>
                 </div>
               </div>
@@ -29,43 +29,39 @@ class Home extends Component {
             </div>
           </div>
           <div className="white-container">
-          <div className="container">
-          <div className="row">
-            <div className="col-12 col-md-8 bolder-font">
-              <p>BEER</p>
-              <button type="button" class="btn-img" data-toggle="modal" data-target="#exampleModal">
-                <img src={card_draft} alt="card draft" />
-              </button>
-              <img src={card_wireframe} alt="card wireframe" />
-              <img src={card_wireframe} alt="card wireframe" />
-              <img src={card_wireframe} alt="card wireframe" />
-              <img src={card_wireframe} alt="card wireframe" />
-              <img src={card_wireframe} alt="card wireframe" />
-              <img src={card_wireframe} alt="card wireframe" />
-              <img src={card_wireframe} alt="card wireframe" />
-            </div>
-
-            <div className="col-12 col-md-4 bolder-font container-crate">
-              <p>CRATE</p>
-              <nav className="nav">
-                <a class="nav-link active nav-crate" href="#">ONE</a>
-                <a class="nav-link nav-crate" href="#">TWO</a>
-                <a class="nav-link nav-crate" href="#">THREE</a>
-              </nav>
-              <img src={beer_crate} alt="beer crate" />
-              <p class="quote">
-                Add a beer to have it appear in the crate.
-              </p>
-              <p class="quote-author">
-                - Captain Obvious
-              </p>
+            <div className="row row-2">
+              <div className="col-12 col-md-8 bolder-font beer-list">
+                <p>Beer</p>
+                <button type="button" className="btn-img" data-toggle="modal" data-target="#exampleModal">
+                  <img src={card_draft} alt="card draft" />
+                </button>
+                <img src={card_wireframe} alt="card wireframe" />
+                <img src={card_wireframe} alt="card wireframe" />
+                <img src={card_wireframe} alt="card wireframe" />
+                <img src={card_wireframe} alt="card wireframe" />
+                <img src={card_wireframe} alt="card wireframe" />
+                <img src={card_wireframe} alt="card wireframe" />
+                <img src={card_wireframe} alt="card wireframe" />
+              </div>
+              <div className="col-12 col-md-4 crate-container">
+                <p className="bolder-font">Crate</p>
+                <div className="crate-img">
+                  <nav className="crate-navigation">
+                    <Link className="p-2 " to="#">ONE</Link>
+                    <Link className="p-2 " to="#">TWO</Link>
+                    <Link className="p-2 " to="#">THREE</Link>
+                  </nav>
+                  <img src={beer_crate} alt="beer crate" />
+                </div>
+                <p className="quote">
+                  Add a beer to have it appear in the crate.
+                </p>
+                <p className="quote-author">
+                  - Captain Obvious
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-
-          </div>
-
-         
         </div>
         <Footer/>
       </div>

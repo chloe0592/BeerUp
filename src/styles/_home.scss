@@ -1,20 +1,59 @@
 .main-container {
-  padding: 200px; 
-}
-
-body {
-  background-image: url("../assets/pattern.png");
-  background-color: #000 !important;
-}
-
-.title-text {
-  color: white;
+//   padding: 200px; 
 }
 
 .white-container {
-  background-color: white;
+	background-color: white;
+	padding-top: 40px;
 }
 
+.row-1 {
+	padding: 120px 0px 0 90px;
+}
+
+.row-2 {
+	padding: 20px 0px 20px 80px;
+}
+
+body {
+	background-image: url("../assets/pattern.png");
+	background-color: #000 !important;
+}
+
+.title-text {
+  	color: white;
+}
+
+.title-text h1 {
+	font-size: 90px;
+	font-weight: 800;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+.bolder-font {
+	font-size: 35px;
+	font-weight: 600;
+}
+
+.crate-container .quote {
+	font-weight: 400;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.crate-container .quote-author {
+	font-weight: 200;
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+}
+
+.crate-container img {
+	padding-top: 10px;
+}
 
 .join-beerup-btn {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc907), color-stop(1, #ffc907));
@@ -35,7 +74,7 @@ body {
 	font-family:Arial !important;
 	font-size:13px !important;
 	font-weight:bold !important;
-	padding:20px 39px !important;
+	padding:14px 39px !important;
 	text-decoration:none !important;
 }
 .join-beerup-btn:hover {
