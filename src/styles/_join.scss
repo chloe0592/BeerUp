@@ -1,61 +1,47 @@
-.main-container {
-//   padding: 200px; 
+.form-container {
+    padding: 0px 30% 30px;
 }
 
-.gray-container {
-	background-color: #F5F5F5;
-	padding-top: 40px;
-}
-
-.row-1 {
-	padding: 120px 0px 0 90px;
-}
-
-.row-2 {
-	padding: 20px 0px 20px 80px;
-}
-
-body {
-	background-image: url("../assets/pattern.png");
-	background-color: #000 !important;
-}
-
-.title-text {
-  	color: white;
-}
-
-.title-text h1 {
-	font-size: 90px;
-	font-weight: 800;
-	padding-top: 20px;
-	padding-bottom: 30px;
-}
-
-.bolder-font {
-	font-size: 35px;
-	font-weight: 600;
-}
-
-.crate-container .quote {
-	font-weight: 400;
-    font-size: 14px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+.text-join p {
     text-align: center;
+    font-size: 30px;
+    font-weight: 600;
 }
 
-.crate-container .quote-author {
-	font-weight: 200;
-    font-size: 14px;
-    color: gray;
+Form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-box-shadow: 6px 8px 5px -2px rgba(216,216,216,1);
+    -moz-box-shadow: 6px 8px 5px -2px rgba(216,216,216,1);
+    box-shadow: 6px 8px 5px -2px rgba(216,216,216,1);
+
+}
+
+.form-control {
+	font-size: 14px !important;
+}
+
+.form-check-label {
+    margin-bottom: 12px !important;
+    font-size: 13px !important;
+}
+
+.rsvp-checkboxes {
+	font-size: 13px;
+}
+
+Form p {
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.joinup-btn-container {
     text-align: center;
+    padding: 20px 0;
 }
 
-.crate-container img {
-	padding-top: 10px;
-}
-
-.join-beerup-btn {
+.joinup-beerup-btn {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc907), color-stop(1, #ffc907));
 	background:-moz-linear-gradient(top, #ffc907 5%, #ffc907 100%);
 	background:-webkit-linear-gradient(top, #ffc907 5%, #ffc907 100%);
@@ -74,10 +60,10 @@ body {
 	font-family:Arial !important;
 	font-size:13px !important;
 	font-weight:bold !important;
-	padding:14px 39px !important;
+	padding:14px 65px !important;
 	text-decoration:none !important;
 }
-.join-beerup-btn:hover {
+.joinup-beerup-btn:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc907), color-stop(1, #ffc907));
 	background:-moz-linear-gradient(top, #ffc907 5%, #ffc907 100%);
 	background:-webkit-linear-gradient(top, #ffc907 5%, #ffc907 100%);
@@ -87,7 +73,9 @@ body {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc907', endColorstr='#ffc907',GradientType=0);
 	background-color:#ffc907 !important;
 }
-.join-beerup-btn:active {
+.joinup-beerup-btn:active {
 	position:relative;
 	top:1px;
 }
+
+

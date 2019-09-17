@@ -22,9 +22,9 @@ class Footer extends Component {
 
           <div className="col-md-4 mb-md-0 mb-3">
             <nav className="my-2 my-md-0 mr-md-3 text-center">
-              <Link className="p-2 text-light" to="/">Home</Link>
-              <Link className="p-2 text-light" to="/">Favourites</Link>
-              <Link className="p-2 text-light" to="/">JOIN</Link>
+              <Link className="p-2 text-light" to="/">HOME</Link>
+              <Link className="p-2 text-light" to="/favorites">FAVORITES</Link>
+              <Link className="p-2 text-light" to="/joinup">JOIN</Link>
             </nav>
           </div>
           <div className="col-md-4 mb-md-0 mb-3 social-icons text-center">

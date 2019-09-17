@@ -13,8 +13,8 @@ class Header extends Component {
           </div>
           <nav className="my-2 my-md-0 mr-md-3">
             <Link className="p-2 text-light header-link" to="/">Home</Link>
-            <Link className="p-2 text-light header-link" to="/">Favourites</Link>
-            <Link className="btn btn-outline-primary header-link join-btn" to="/">JOIN</Link>
+            <Link className="p-2 text-light header-link" to="/favorites">Favorites</Link>
+            <Link className="btn btn-outline-primary header-link join-btn" to="/joinup">JOIN</Link>
           </nav>
         </div>
     );
