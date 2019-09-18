@@ -14,7 +14,7 @@ class Join extends Component {
       email: "",
       number: "",
       textarea: "",
-      rsvp: "",
+      rsvp: "option1",
       futureInfo: false,
       reminder: false
     };
