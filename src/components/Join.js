@@ -6,6 +6,39 @@ import {  CustomInput, Button, Form, FormGroup, Label, Input } from 'reactstrap'
 
 
 class Join extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: "",
+      email: "",
+      number: "",
+      textarea: "",
+      rsvp: "",
+      futureInfo: false,
+      reminder: false
+    };
+  }
+
+
+  handleChange = event => {
+   const isCheckbox = event.target.type === "checkbox";
+    this.setState({
+      [event.target.name]: isCheckbox ? event.target.checked : event.target.value
+    });
+  }
+
+  handleOptionChange= (changeEvent) => {
+    this.setState({
+      rsvp: changeEvent.target.value
+    });
+  }
+
+  handleSubmit = () => {
+    console.log(this.state);
+  }
+
+
   render() {
     return (
       <div>
@@ -30,39 +63,114 @@ class Join extends Component {
               <Form>
                 <p>PERSONAL INFORMATION</p> 
                 <FormGroup>
-                  <Input type="name" name="name" id="name" placeholder="Full name" />
+                  <Input 
+                    required
+                    name="name"
+                    type="name"
+                    id="name"
+                    value={this.state.name} 
+                    onChange={this.handleChange} 
+                    placeholder="Full name" 
+                  />
                 </FormGroup>
+
                 <p>CONTACT INFORMATION</p> 
                 <FormGroup>
-                  <Input type="email" name="email" id="email" placeholder="Email" />
+                  <Input 
+                    required
+                    name="email"
+                    type="email"
+                    id="email" 
+                    value={this.state.email}
+                    onChange={this.handleChange} 
+                    placeholder="Email" 
+                  />
                 </FormGroup>
+
                 <FormGroup>
-                  <Input type="number" name="number" id="number" placeholder="Phone number" />
+                  <Input 
+                    name="number"
+                    type="number"
+                    id="number" 
+                    value={this.state.number}  
+                    onChange={this.handleChange}
+                    placeholder="Phone number" 
+                  />
                 </FormGroup>
-                <FormGroup className="rsvp-checkboxes">
+
+                <FormGroup className="rsvp-checkboxes" >
                   <p>RSVP</p> 
-                  <CustomInput type="radio" id="rsvp1" name="radio" label="I'm coming!" />
-                  <CustomInput type="radio" id="rsvp2" name="radio" label="Maybe?" />
-                  <CustomInput type="radio" id="rsvp3" name="radio" label="Can't make it" />
+                  <CustomInput 
+                    name="rsvp1"
+                    type="radio" 
+                    id="rsvp1" 
+                    value="option1"
+                    checked={this.state.rsvp === "option1"} 
+                    onChange={this.handleOptionChange}
+                    label="I'm coming!" 
+                  />
+                  <CustomInput 
+                    name="rsvp2"
+                    type="radio" 
+                    id="rsvp2" 
+                    value="option2"
+                    checked={this.state.rsvp === "option2"}
+                    onChange={this.handleOptionChange}
+                    label="Maybe?" 
+                  />
+                  <CustomInput 
+                    name="rsvp3" 
+                    type="radio" 
+                    id="rsvp3" 
+                    value="option3"
+                    checked={this.state.rsvp === "option3"} 
+                    onChange={this.handleOptionChange}
+                    label="Can't make it" 
+                  />
                 </FormGroup>
+
                 <FormGroup>
-                  <Input type="textarea" name="text" id="textarea" placeholder="Something you'd like to add?"  />
+                  <Input 
+                    name="textarea"
+                    type="textarea"
+                    id="textarea" 
+                    value={this.state.textarea}
+                    onChange={this.handleChange}  
+                    placeholder="Something you'd like to add?"  
+                  />
                 </FormGroup>
                 
                 <FormGroup check>
                   <Label check>
-                    <Input type="checkbox" id="checkbox1" />{' '}
-                      Let me know about the future beerups!
+                    <Input 
+                      name="futureInfo"
+                      type="checkbox" 
+                      id="checkbox1"
+                      checked={this.state.futureInfo}
+                      onChange={this.handleChange} 
+                    />{' '}
+                    Let me know about the future beerups!
                   </Label>
                 </FormGroup>
+
                 <FormGroup check>
                   <Label check>
-                    <Input type="checkbox" id="checkbox2"/>{' '}
-                      Remind me one day before this beerup
+                    <Input 
+                      name="reminder"
+                      type="checkbox" 
+                      id="checkbox2"
+                      checked={this.state.reminder}
+                      onChange={this.handleChange}
+                    />{' '}
+                    Remind me one day before this beerup
                   </Label>
                 </FormGroup>
+
                 <div className="joinup-btn-container">
-                  <Button className="joinup-beerup-btn">
+                  <Button 
+                    className="joinup-beerup-btn"
+                    onClick={this.handleSubmit}
+                  >
                     JOIN UP
                   </Button>
                 </div>
