@@ -3,7 +3,8 @@ import Header from './layout/Header';
 import Footer from './layout/Footer';
 import beers_in_crate from '../assets/illustration.svg';
 import {  CustomInput, Button, Form, FormGroup, Label, Input } from 'reactstrap';
-
+import swal from 'sweetalert';
+import { Redirect } from 'react-router-dom';
 
 class Join extends Component {
   constructor(props) {
@@ -16,7 +17,8 @@ class Join extends Component {
       textarea: "",
       rsvp: "option1",
       futureInfo: false,
-      reminder: false
+      reminder: false,
+      redirect: false
     };
   }
 
@@ -34,12 +36,35 @@ class Join extends Component {
     });
   }
 
-  handleSubmit = () => {
-    console.log(this.state);
+  setRedirect = () => {
+    this.setState({
+      redirect: true,
+    })
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state);
+    if (this.state.name===""  || this.state.email==="") {
+      swal({
+        title: "Please, fill out the required fields (your full name and email)",
+        icon: "warning"
+      });
+    } else {
+      swal({
+        title: "Whoohoo! Welcome to the Beerup family!",
+        icon: "success",
+        button: "Aww yiss!"
+      });
+      return this.setRedirect();
+    }
+  }
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to='/favorites' />
+    }
+  
     return (
       <div>
         <Header/>
@@ -64,7 +89,6 @@ class Join extends Component {
                 <p>PERSONAL INFORMATION</p> 
                 <FormGroup>
                   <Input 
-                    required
                     name="name"
                     type="name"
                     id="name"
@@ -77,7 +101,6 @@ class Join extends Component {
                 <p>CONTACT INFORMATION</p> 
                 <FormGroup>
                   <Input 
-                    required
                     name="email"
                     type="email"
                     id="email" 
@@ -90,11 +113,11 @@ class Join extends Component {
                 <FormGroup>
                   <Input 
                     name="number"
-                    type="number"
+                    type="text"
                     id="number" 
                     value={this.state.number}  
                     onChange={this.handleChange}
-                    placeholder="Phone number" 
+                    placeholder="Phone number (optional)" 
                   />
                 </FormGroup>
 
@@ -136,7 +159,7 @@ class Join extends Component {
                     id="textarea" 
                     value={this.state.textarea}
                     onChange={this.handleChange}  
-                    placeholder="Something you'd like to add?"  
+                    placeholder="Something you'd like to add? (optional)"  
                   />
                 </FormGroup>
                 
