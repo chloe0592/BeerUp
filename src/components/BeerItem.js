@@ -1,17 +1,24 @@
 import React, {Component} from 'react';
-import unselected_item from '../assets/radio unselected.svg';
 import heart_outline from '../assets/heart outline.svg';
+import heart_solid from '../assets/heart solid.svg';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
+
+const imagesPath = {
+  heart_gray: heart_outline,
+  heart_red: heart_solid
+}
 
 
 class BeerItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      show : false
+      show : false,
+      liked: true
     }
     console.log('props', this.props.beer);
+
   }
 
   toggleModal = e => {
@@ -20,13 +27,20 @@ class BeerItem extends Component {
     });
   };
 
+  toggleImage = () => {
+    this.setState(state => ({ liked: !state.liked }))
+  }
+
+  getImageName = () => this.state.liked ? 'heart_gray' : 'heart_red'
+
 
   render() {
+    const imageName = this.getImageName();
     return ( 
         <div className="beer-item-container">
           <button className="beer-item-btn" onClick={this.toggleModal}>
             <div className="selecting-container">
-              <img className="heart-selecting" src={heart_outline} alt="heart outline" />
+              <img className="heart-selecting" src={imagesPath[imageName]} alt="heart outline" />
             </div>
             <div className="row-beer-item">
               <div className="column1-beer-item">
@@ -48,7 +62,7 @@ class BeerItem extends Component {
               <ModalHeader toggle={this.toggleModal}>
                 <div>
                   <button className="heart-btn-modal">
-                    <img src={heart_outline} alt="heart outline" />
+                    <img src={imagesPath[imageName]} onClick={this.toggleImage} alt="heart outline" />
                   </button>
                 </div>
               </ModalHeader>
