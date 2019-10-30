@@ -12,16 +12,16 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      beers: [],
-      show: false
+      beers: []
+      // show: false
     };
   }
 
-  toggleModal = e => {
-    this.setState({
-      show: !this.state.show
-    });
-  };
+  // toggleModal = e => {
+  //   this.setState({
+  //     show: !this.state.show
+  //   });
+  // };
 
 
   componentDidMount = async (event) => {
@@ -61,7 +61,7 @@ class Home extends Component {
             </div>
           </div>
           <div className="gray-container">
-          <Button color="danger" onClick={this.toggleModal}>Ajde showaj</Button>
+          {/* <Button color="danger" onClick={this.toggleModal}>Ajde showaj</Button>
           <Modal isOpen={this.state.show} toggle={this.toggleModal}>
             <ModalHeader toggle={this.toggleModal}></ModalHeader>
             <ModalBody>
@@ -71,7 +71,7 @@ class Home extends Component {
               <Button color="primary" >Do Something</Button>{' '}
               <Button color="secondary" onClick={this.toggleModal}>Cancel</Button>
             </ModalFooter>
-          </Modal>
+          </Modal> */}
             <div className="row row-2">
               <div className="col-12 col-md-8">
                 <p className="bolder-font">Beer</p>

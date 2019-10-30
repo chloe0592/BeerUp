@@ -39,12 +39,11 @@
 	text-align: left;
 }
 
-
 .beer-item-spec1 {
 	display: inline-block;
 	text-align: left;
 	margin-right: 25px;
-	font-size: 13px;
+	font-size: 14px;
 	color: gray;
 }
 
@@ -54,7 +53,51 @@
 	font-size: 13px;
 }
 
+.row-modal {
+	display: flex;
+}
 
+.column1-modal {
+	flex: 30%;
+}
 
+.column2-modal {
+	flex: 70%;
+}
+
+.item-name-modal {
+	font-size: 20px;
+    font-weight: 700;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.beer-description-modal{
+	margin-top: 15px;
+	color: gray;
+}
+
+.beers-img-modal {
+	height: 250px;
+    width: 80px;
+    margin: 60px 10px 0px;
+}
+
+.crate-btn-modal {
+	padding-right: 30%;
+}
+
+.heart-btn-modal {
+	border: none;
+}
+
+.close {
+	color: #ffc907 !important;
+	font-size: 2.5rem !important;
+}
+
+.modal-footer {
+	border: none !important;
+}
 
 
