@@ -5,8 +5,9 @@ import Favorites from './components/Favorites';
 import Join from './components/Join';
 import ScrollToTop from 'react-router-scroll-top';
 import BeerItem from './components/BeerItem';
+import FavoriteBeerItem from './components/FavoriteBeerItem';
 
-export default class Routes extends Component{
+export default class Routes extends Component {
     render(){
         return(
             <Router>
@@ -16,6 +17,7 @@ export default class Routes extends Component{
                         <Route exact path="/favorites" component={Favorites} />
                         <Route exact path="/joinup" component={Join} />
                         <Route exact path="/beeritem" component={BeerItem} />
+                        <Route exact path="/favoritebeeritem" component={FavoriteBeerItem} />
                     </Switch>
                 </ScrollToTop> 
             </Router>

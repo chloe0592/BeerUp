@@ -5,11 +5,19 @@
 .beer-item-btn {
 	background-color: white;
 	font-size: 10px;
-	width: 184px;
+	width: 150px;
     height: 150px;
 	margin: 10px 15px 10px 0px;
 	border-radius: 5px;
     box-shadow: 1px 1px 4px 0px #A0A0A0;
+}
+
+.beer-item-btn:focus {     
+    outline-color: #ffc907;    
+}
+
+.beer-item-btn:active {     
+    outline-color: #ffc907;    
 }
 
 .selecting-container {
@@ -34,36 +42,37 @@
 }
 
 .beers-img {
-	margin-top: 30px;
-	height: 100px;
- 	width: 30px;
+	margin-top: 20px;
+    height: 93px;
+    width: 25px;
 }
 
 .beer-item-info {
-	width: 120px;
+	width: 85px;
     height: 120px;
-	margin-left: 18px;
-	margin-top: 20px;
-	text-align: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: left;
 }
 
 .beer-item-name {
-	font-size: 15px;
-	font-weight: 600;
+	font-size: 12px;
+    font-weight: 600;
+	margin-bottom: 10px;
 }
 
 .beer-item-spec1 {
 	display: inline-block;
-	text-align: left;
-	margin-right: 25px;
-	font-size: 14px;
-	color: gray;
+    text-align: left;
+    margin-right: 13px;
+    font-size: 12px;
+    color: gray;
 }
 
 .beer-item-spec2 {
 	display: inline-block;
-	text-align: right;
-	font-size: 13px;
+    text-align: right;
+    font-size: 12px;
 }
 
 .row-modal {

@@ -1,14 +1,23 @@
 import React, {Component} from 'react';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
+import FavoriteBeerItem from './FavoriteBeerItem';
 import beers_in_crate from '../assets/illustration.svg';
-import card_draft from '../assets/card draft.svg';
-import card_wireframe from '../assets/card wireframe.svg';
 import beer_crate from '../assets/crate.svg';
 import {Link} from 'react-router-dom';
+import { Row } from 'reactstrap';
+
 
 
 class Favorites extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      favoriteBeers: JSON.parse(localStorage.getItem("localStorageBeers"))
+    };
+    // console.log('favorite', this.state.favoriteBeers);
+  }
+
   render() {
     return (
       <div>
@@ -26,23 +35,19 @@ class Favorites extends Component {
           </div>
           <div className="gray-container">
             <div className="row row-2">
-              <div className="col-12 col-md-8 bolder-font beer-list">
-                <p>My favorite beers</p>
-                <button type="button" className="btn-img" data-toggle="modal" data-target="#exampleModal">
-                  <img src={card_draft} alt="card draft" />
-                </button>
-                <img src={card_wireframe} alt="card wireframe" />
-                <img src={card_wireframe} alt="card wireframe" />
-                <img src={card_wireframe} alt="card wireframe" />
-                <img src={card_wireframe} alt="card wireframe" />
-                <img src={card_wireframe} alt="card wireframe" />
-                <img src={card_wireframe} alt="card wireframe" />
-                <img src={card_wireframe} alt="card wireframe" />
+              <div className="col-12 col-md-8">
+                <p className="bolder-font">My favorite beers</p>
+                <Row>
+                  {
+                    this.state.favoriteBeers.map((beer, index) => {
+                      if (this.state.favoriteBeers[index].favorite === true)
+                      return <FavoriteBeerItem key={index} beer={beer} />
+                    })
+                  }
+                </Row>
               </div>
               <div className="col-12 col-md-4 crate-container">
-                <p className="bolder-font">
-                  Crate
-                </p>
+                <p className="bolder-font">Crate</p>
                 <div className="crate-img">
                   <nav className="crate-navigation">
                     <Link className="p-2 " to="#">ONE</Link>

@@ -11,7 +11,7 @@ class Header extends Component {
             <img src={symbol} alt="Beer logo" className="beer-logo-img"/>
             <img src={logo} alt="Beerup logo"/>
           </div>
-          <nav className="my-2 my-md-0 mr-md-3">
+          <nav className="my-2 my-md-0 mr-md-3 main-navigation">
             <Link className="p-2 text-light header-link" to="/">Home</Link>
             <Link className="p-2 text-light header-link" to="/favorites">Favorites</Link>
             <Link className="btn btn-outline-primary header-link join-btn" to="/joinup">JOIN</Link>

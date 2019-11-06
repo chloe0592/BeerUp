@@ -18,7 +18,9 @@ body {
 }
 
 .title-text {
-  	color: white;
+	  color: white;
+	  margin-top: 10px;
+
 }
 
 .title-text h1 {
@@ -54,6 +56,7 @@ body {
 
 
 .join-beerup-btn {
+	margin-bottom: 40px;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc907), color-stop(1, #ffc907));
 	background:-moz-linear-gradient(top, #ffc907 5%, #ffc907 100%);
 	background:-webkit-linear-gradient(top, #ffc907 5%, #ffc907 100%);

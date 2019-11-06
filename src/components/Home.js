@@ -3,7 +3,6 @@ import Header from './layout/Header';
 import Footer from './layout/Footer';
 import BeerItem from './BeerItem';
 import beers_in_crate from '../assets/illustration.svg';
-import card_wireframe from '../assets/card wireframe.svg';
 import beer_crate from '../assets/crate.svg';
 import {Link} from 'react-router-dom';
 import { Row } from 'reactstrap';
@@ -16,19 +15,40 @@ class Home extends Component {
     };
   }
 
-  componentDidMount = async (event) => {
-    await fetch("https://api.punkapi.com/v2/beers")
-    .then(async (response) => {
-      const json = await response.json();
-      // console.log(json);
+  componentDidMount = async () => {
+    // Get beers from local storage if exist
+    const cachedBeers = JSON.parse(localStorage.getItem("localStorageBeers"));
+    if (cachedBeers) {
       this.setState({ 
-        beers: json
-      })
-      console.log('state:', this.state.beers);
-      
-    }).catch(e => {
-      console.log(e);
-    })
+        beers: cachedBeers
+      });
+      console.log('cachedBeers:', cachedBeers);
+    } else {
+      // If beers from local storage don't exist, make api call
+      await fetch("https://api.punkapi.com/v2/beers")
+        .then(async (response) => {
+        const jsonBeers = await response.json();
+        // Add favorite parameter to each new beer from api call
+        for(var i=0; i<jsonBeers.length; i++) {
+          jsonBeers[i].favorite = false;
+        }
+        // Store new beers from api call into local storage
+        localStorage.setItem("localStorageBeers", JSON.stringify(jsonBeers));
+        this.setState({ 
+          beers: jsonBeers
+        });
+        console.log('beers:', this.state.beers);
+      }).catch(e => {
+        console.log(e);
+      });
+    }
+  }
+
+  updateBeers = (cachedBeers) => {
+    // Update state
+    this.setState({ 
+      beers: cachedBeers
+    });
   }
 
   render() {
@@ -57,8 +77,10 @@ class Home extends Component {
               <div className="col-12 col-md-8">
                 <p className="bolder-font">Beer</p>
                 <Row >
-                  {this.state.beers.map((beer, index) =>
-                    <BeerItem key={index} beer={beer}/>)
+                  {
+                    this.state.beers.map((beer, index) => {
+                      return <BeerItem key={index} beer={beer} callbackUpdateBeers={this.updateBeers}/>
+                    })
                   }
                 </Row>
               </div>

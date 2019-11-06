@@ -48,13 +48,15 @@ class Join extends Component {
     if (this.state.name===""  || this.state.email==="") {
       swal({
         title: "Please, fill out the required fields (your full name and email)",
-        icon: "warning"
+        icon: "warning",
+        timer: 3000
       });
     } else {
       swal({
         title: "Whoohoo! Welcome to the Beerup family!",
         icon: "success",
-        button: "Aww yiss!"
+        button: "Aww yiss!",
+        timer: 3000
       });
       return this.setRedirect();
     }

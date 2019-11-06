@@ -1,22 +1,16 @@
 import React, {Component} from 'react';
-import heart_outline from '../assets/heart outline.svg';
 import heart_solid from '../assets/heart solid.svg';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
-const imagesPath = {
-  heart_gray: heart_outline,
-  heart_red: heart_solid
-}
-
-
-class BeerItem extends Component {
+class FavoriteBeerItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
       show : false,
       favorite: this.props.beer.favorite
     }
+    console.log('is favorite:', this.props.beer.favorite);
 
   }
 
@@ -27,36 +21,18 @@ class BeerItem extends Component {
   };
 
   toggleFavorite = () => {
-    // Change state favorite
     this.setState({
-      favorite: !this.state.favorite
-    }, function () {
-      // Get beers from local storage
-      const storageBeers = JSON.parse(localStorage.getItem("localStorageBeers"));
-      // Change favorite parameter for specific beer (compare ids)
-      for(var i=0; i<storageBeers.length; i++) {
-        if(storageBeers[i].id === this.props.beer.id) {
-          storageBeers[i].favorite = this.state.favorite;
-        }
-      }
-      // Update local storage
-      localStorage.setItem("localStorageBeers", JSON.stringify(storageBeers));
-      // Update parent state beers
-      this.props.callbackUpdateBeers(storageBeers);
-    });
-  }
-
-  getImageName = () => this.state.favorite ? 'heart_red' : 'heart_gray'
-
+      favorite: !this.props.beer.favorite
+    })}
+ 
 
   render() {
-    const imageName = this.getImageName();
 
     return ( 
         <div className="beer-item-container">
           <button className="beer-item-btn" onClick={this.toggleModal}>
             <div className="selecting-container">
-              <img className="heart-selecting" src={imagesPath[imageName]} alt="heart outline" />
+              <img className="heart-selecting" src={heart_solid} alt="heart outline" />
             </div>
             <div className="row-beer-item">
               <div className="column1-beer-item">
@@ -78,7 +54,7 @@ class BeerItem extends Component {
               <ModalHeader toggle={this.toggleModal}>
                 <div>
                   <button className="heart-btn-modal">
-                    <img src={imagesPath[imageName]} onClick={this.toggleFavorite} alt="heart outline" />
+                    <img src={heart_solid} onClick={this.toggleFavorite} alt="heart outline" />
                   </button>
                 </div>
               </ModalHeader>
@@ -122,4 +98,4 @@ class BeerItem extends Component {
   }
 }
 
-export default BeerItem;
+export default FavoriteBeerItem;
