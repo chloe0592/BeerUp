@@ -54,7 +54,6 @@ body {
 	padding-top: 10px;
 }
 
-
 .join-beerup-btn {
 	margin-bottom: 40px;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc907), color-stop(1, #ffc907));
@@ -92,3 +91,29 @@ body {
 	position:relative;
 	top:1px;
 }
+
+
+@media (max-width: 768px) {
+
+	.crate-container {
+	  text-align: center;
+	}
+  
+	.main-navigation {
+		margin-left: 10%;
+	}
+
+	.beers-logo {
+		margin-right: 10%;
+	}
+  
+	.social-icons {
+		margin-left: 10%;
+	}
+
+	.form-container {
+		padding: 0px 25% 30px !important;
+	}
+	
+  }
+  

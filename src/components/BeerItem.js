@@ -9,7 +9,6 @@ const imagesPath = {
   heart_red: heart_solid
 }
 
-
 class BeerItem extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +16,6 @@ class BeerItem extends Component {
       show : false,
       favorite: this.props.beer.favorite
     }
-
   }
 
   toggleModal = e => {
@@ -48,7 +46,7 @@ class BeerItem extends Component {
 
   getImageName = () => this.state.favorite ? 'heart_red' : 'heart_gray'
 
-
+  
   render() {
     const imageName = this.getImageName();
 

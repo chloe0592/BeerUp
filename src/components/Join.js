@@ -22,7 +22,6 @@ class Join extends Component {
     };
   }
 
-
   handleChange = event => {
    const isCheckbox = event.target.type === "checkbox";
     this.setState({
@@ -45,7 +44,7 @@ class Join extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state);
-    if (this.state.name===""  || this.state.email==="") {
+    if (this.state.name==="" || this.state.email==="") {
       swal({
         title: "Please, fill out the required fields (your full name and email)",
         icon: "warning",

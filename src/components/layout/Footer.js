@@ -14,7 +14,7 @@ class Footer extends Component {
 
         <div className="row footer-row">
           <div className="col-md-4 mt-md-0 mt-3">
-            <div className="my-0 mr-md-auto">
+            <div className="my-0 mr-md-auto beers-logo">
               <img src={symbol} alt="Beer logo" className="beer-logo-img"/>
               <img src={logo} alt="Beerup logo"/>
             </div>

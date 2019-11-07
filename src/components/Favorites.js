@@ -8,7 +8,6 @@ import {Link} from 'react-router-dom';
 import { Row } from 'reactstrap';
 
 
-
 class Favorites extends Component {
   constructor(props) {
     super(props);
@@ -40,8 +39,11 @@ class Favorites extends Component {
                 <Row>
                   {
                     this.state.favoriteBeers.map((beer, index) => {
-                      if (this.state.favoriteBeers[index].favorite === true)
-                      return <FavoriteBeerItem key={index} beer={beer} />
+                      if (this.state.favoriteBeers[index].favorite === true) {
+                        return <FavoriteBeerItem key={index} beer={beer} />;
+                        } else {
+                        console.log ("You don't have any favorites");
+                        }  
                     })
                   }
                 </Row>
