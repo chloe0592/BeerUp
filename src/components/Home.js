@@ -44,8 +44,8 @@ class Home extends Component {
     }
   }
 
-  updateBeers = (cachedBeers) => {
     // Update state
+  updateBeers = (cachedBeers) => {
     this.setState({ 
       beers: cachedBeers
     });
@@ -58,23 +58,23 @@ class Home extends Component {
         <div className="main-container">
           <div className="black-container">
             <div className="row row-1">
-              <div className="col-12 col-md-6">
+              <div className="col-12 col-md-6 text-col-container">
                 <div className="title-text">
                   <h6>THE BEERSTER PRO 2.0</h6>
-                  <h1>JOIN OUR <br></br> FAMOUS <br></br> BEERUP</h1>
+                  <h1>JOIN OUR <br></br> FAMOUS <br></br> BEERUP!</h1>
                   <Link className="btn btn-outline-primary header-link join-beerup-btn" to="/joinup">
                     JOIN BEERUP
                   </Link>
                 </div>
               </div>
-              <div className="col-12 col-md-6">
-                <img src={beers_in_crate} alt="beers in crate" />
+              <div className="col-12 col-md-6 img-col-container">
+                <img className="beers-in-crate-img" src={beers_in_crate} alt="beers in crate" />
               </div>
             </div>
           </div>
           <div className="gray-container">
             <div className="row row-2">
-              <div className="col-12 col-md-8">
+              <div className="col-12 col-md-8 beers-container">
                 <p className="bolder-font">Beer</p>
                 <Row >
                   {

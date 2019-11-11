@@ -72,11 +72,11 @@ class Join extends Component {
         <div className="main-container">
           <div className="black-container">
             <div className="row row-1">
-              <div className="col-12 col-md-6 title-text">
+              <div className="col-12 col-md-6 title-text text-col-container">
                 <h1>JOIN UP!</h1>
               </div>
-              <div className="col-12 col-md-6">
-                <img src={beers_in_crate} alt="beers in crate" />
+              <div className="col-12 col-md-6 img-col-container">
+                <img className="beers-in-crate-img" src={beers_in_crate} alt="beers in crate" />
               </div>
             </div>
           </div>

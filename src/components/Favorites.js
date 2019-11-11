@@ -24,17 +24,17 @@ class Favorites extends Component {
         <div className="main-container">
           <div className="black-container">
             <div className="row row-1">
-              <div className="col-12 col-md-6 title-text">
+              <div className="col-12 col-md-6 text-col-container title-text">
                 <h1>FAVORITES</h1>
               </div>
-              <div className="col-12 col-md-6">
-                <img src={beers_in_crate} alt="beers in crate" />
+              <div className="col-12 col-md-6 img-col-container">
+                <img className="beers-in-crate-img" src={beers_in_crate} alt="beers in crate" />
               </div>
             </div>
           </div>
           <div className="gray-container">
             <div className="row row-2">
-              <div className="col-12 col-md-8">
+              <div className="col-12 col-md-8 beers-container">
                 <p className="bolder-font">My favorite beers</p>
                 <Row>
                   {
