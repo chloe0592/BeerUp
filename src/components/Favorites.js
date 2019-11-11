@@ -51,11 +51,6 @@ class Favorites extends Component {
               <div className="col-12 col-md-4 crate-container">
                 <p className="bolder-font">Crate</p>
                 <div className="crate-img">
-                  <nav className="crate-navigation">
-                    <Link className="p-2 " to="#">ONE</Link>
-                    <Link className="p-2 " to="#">TWO</Link>
-                    <Link className="p-2 " to="#">THREE</Link>
-                  </nav>
                   <img src={beer_crate} alt="beer crate" />
                 </div>
                 <p className="quote">
