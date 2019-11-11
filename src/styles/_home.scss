@@ -12,6 +12,11 @@
 	padding: 20px 0px 20px 80px;
 }
 
+.beers-in-crate-img {
+	position: absolute;
+    z-index: -1;
+}
+
 body {
 	background-image: url("../assets/pattern.png");
 	background-color: #000 !important;
@@ -27,11 +32,11 @@ body {
 	font-size: 78px;
 	font-weight: 800;
 	padding-top: 20px;
-	padding-bottom: 30px;
+	padding-bottom: 50px;
 }
 
 .bolder-font {
-	font-size: 35px;
+	font-size: 28px;
 	font-weight: 600;
 }
 
@@ -74,7 +79,7 @@ body {
 	font-family:Arial !important;
 	font-size:13px !important;
 	font-weight:bold !important;
-	padding:15px 26px !important;
+	padding:10px 25px !important;
 	text-decoration:none !important;
 }
 .join-beerup-btn:hover {
@@ -93,7 +98,7 @@ body {
 }
 
 
-@media (max-width: 699px) {
+@media (max-width: 767px) {
 	//Mobile View
 
 	.text-col-container {
@@ -103,6 +108,7 @@ body {
 
 	.title-text h1 {
 		font-size: 45px;
+		padding-bottom: 20px;
 	}
 
 	.img-col-container {
@@ -110,12 +116,18 @@ body {
 		text-align: center !important;
 	}
 
+
 	.beers-in-crate-img {
 		max-width: 240px;
+		position: relative;		
 	}
 
 	.crate-container {
 	  text-align: center;
+	}
+
+	.join-beerup-btn {
+		margin-left: 40px;
 	}
   
 	.main-navigation {
@@ -140,7 +152,7 @@ body {
 	
   }
 
-  @media (max-width: 1025px) and (min-width: 700px) {
+  @media (max-width: 1025px) and (min-width: 768px) {
 	  //Tablet View
 	
 	.text-col-container {
@@ -154,7 +166,6 @@ body {
 
 	.img-col-container {
 		max-width: 100% !important;
-		text-align: center !important;
 	}
 
 	.beers-container {
